@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D8CCF2772C29703E00C482B1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2762C29703E00C482B1 /* main.cpp */; };
+		D8CCF2942C3014C400C482B1 /* Tokenization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2922C3014C400C482B1 /* Tokenization.cpp */; };
+		D8CCF2972C31151800C482B1 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2952C31151800C482B1 /* Parser.cpp */; };
+		D8CCF29A2C311DD300C482B1 /* Generation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2982C311DD300C482B1 /* Generation.cpp */; };
+		D8CCF2B02C3439A900C482B1 /* Arena.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CCF2AE2C3439A900C482B1 /* Arena.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,15 @@
 /* Begin PBXFileReference section */
 		D8CCF2732C29703E00C482B1 /* Compiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Compiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CCF2762C29703E00C482B1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D8CCF27D2C2973D100C482B1 /* test.newton */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.newton; sourceTree = "<group>"; };
+		D8CCF2922C3014C400C482B1 /* Tokenization.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tokenization.cpp; sourceTree = "<group>"; };
+		D8CCF2932C3014C400C482B1 /* Tokenization.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tokenization.hpp; sourceTree = "<group>"; };
+		D8CCF2952C31151800C482B1 /* Parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
+		D8CCF2962C31151800C482B1 /* Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parser.hpp; sourceTree = "<group>"; };
+		D8CCF2982C311DD300C482B1 /* Generation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Generation.cpp; sourceTree = "<group>"; };
+		D8CCF2992C311DD300C482B1 /* Generation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Generation.hpp; sourceTree = "<group>"; };
+		D8CCF2AE2C3439A900C482B1 /* Arena.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Arena.cpp; sourceTree = "<group>"; };
+		D8CCF2AF2C3439A900C482B1 /* Arena.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Arena.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +54,7 @@
 		D8CCF26A2C29703E00C482B1 = {
 			isa = PBXGroup;
 			children = (
+				D8CCF27D2C2973D100C482B1 /* test.newton */,
 				D8CCF2752C29703E00C482B1 /* Compiler */,
 				D8CCF2742C29703E00C482B1 /* Products */,
 			);
@@ -58,6 +72,14 @@
 			isa = PBXGroup;
 			children = (
 				D8CCF2762C29703E00C482B1 /* main.cpp */,
+				D8CCF2922C3014C400C482B1 /* Tokenization.cpp */,
+				D8CCF2932C3014C400C482B1 /* Tokenization.hpp */,
+				D8CCF2952C31151800C482B1 /* Parser.cpp */,
+				D8CCF2962C31151800C482B1 /* Parser.hpp */,
+				D8CCF2982C311DD300C482B1 /* Generation.cpp */,
+				D8CCF2992C311DD300C482B1 /* Generation.hpp */,
+				D8CCF2AE2C3439A900C482B1 /* Arena.cpp */,
+				D8CCF2AF2C3439A900C482B1 /* Arena.hpp */,
 			);
 			path = Compiler;
 			sourceTree = "<group>";
@@ -119,7 +141,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CCF2942C3014C400C482B1 /* Tokenization.cpp in Sources */,
+				D8CCF2972C31151800C482B1 /* Parser.cpp in Sources */,
+				D8CCF2B02C3439A900C482B1 /* Arena.cpp in Sources */,
 				D8CCF2772C29703E00C482B1 /* main.cpp in Sources */,
+				D8CCF29A2C311DD300C482B1 /* Generation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +159,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++23";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -194,7 +220,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++23";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
