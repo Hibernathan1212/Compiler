@@ -62,7 +62,7 @@ void Generator::gen_bin_expr(const NodeBinExpr* bin_expr)
             gen.gen_expr(minus->lhs);
             gen.pop("rax");
             gen.pop("rbx");
-            gen.m_output << "    minus rax, rbx\n";
+            gen.m_output << "    sub rax, rbx\n";
             gen.push("rax");
         }
         void operator()(const NodeBinExprMulti* multi)
@@ -80,7 +80,7 @@ void Generator::gen_bin_expr(const NodeBinExpr* bin_expr)
             gen.gen_expr(fslash->lhs);
             gen.pop("rax");
             gen.pop("rbx");
-            gen.m_output << "    fslash rbx\n";
+            gen.m_output << "    div rbx\n";
             gen.push("rax");
         }
     };
@@ -188,7 +188,7 @@ void Generator::gen_stmt(const NodeStmt* stmt)
             gen.m_output << "    test rax, rax\n";
             gen.m_output << "    jz " << label << "\n";
             gen.gen_scope(stmt_if->scope);
-            gen. m_output << "jmp " << label << "\n";
+            gen. m_output << "    jmp " << label << "\n";
             if (stmt_if->pred.has_value())
             {
                 std::string end_label = gen.create_label();
@@ -210,7 +210,7 @@ void Generator::gen_stmt(const NodeStmt* stmt)
             }
             gen.gen_expr(stmt_asign->expr);
             gen.pop("rax");
-            gen.m_output << "mov [rsp" << (gen.m_stack_size - it->stack_loc - 1) * 8 << "], rax\n";
+            gen.m_output << "    mov [rsp" << (gen.m_stack_size - it->stack_loc - 1) * 8 << "], rax\n";
         }
     };
     

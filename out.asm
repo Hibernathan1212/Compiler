@@ -14,13 +14,13 @@ _start:
     push rax
     pop rax
     pop rbx
-    minus rax, rbx
+    sub rax, rbx
     push rax
     pop rax
     pop rbx
-    fslash rbx
+    div rbx
     push rax
-    mov rax, 0
+    mov rax, 1
     push rax
     push QWORD [rsp + 0]
     pop rax
@@ -32,20 +32,20 @@ _start:
     pop rdi
     syscall
     add rsp, 0
-jmp label0
+    jmp label0
 label0;
     mov rax, 1
     push rax
     pop rax
-mov [rsp0], rax
+    mov [rsp0], rax
     mov rax, 2
     push rax
     pop rax
-mov [rsp0], rax
+    mov [rsp0], rax
     mov rax, 3
     push rax
     pop rax
-mov [rsp0], rax
+    mov [rsp0], rax
     push QWORD [rsp + 0]
     mov rax, 60
     pop rdi
