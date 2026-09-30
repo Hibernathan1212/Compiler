@@ -44,7 +44,7 @@ int main(int argc, const char * argv[]) {
     
     {
         Generator generator(prog.value());
-        std::fstream file("/Users/nathan/Documents/Coding/Compiler/out.asm", std::ios::out);
+        std::fstream file("/Users/nathan/dev/Compiler/out.asm", std::ios::out);
         file << generator.gen_prog();
     }
     
